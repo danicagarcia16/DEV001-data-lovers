@@ -16170,6 +16170,7 @@ export default {
   books: [
     {
       "id": 1,
+      "img": "https://i.pinimg.com/564x/8d/9d/6a/8d9d6a481ec7518eecbe4ccac623a92b.jpg",
       "title": "Harry Potter and the Sorcerer's Stone",
       "releaseDay": "June 26, 1997",
       "author": "J. K. Rowling",
@@ -16178,6 +16179,7 @@ export default {
         },
     {
       "id": 2,
+      "img": "https://i.pinimg.com/564x/1d/2f/fe/1d2ffef323a06a67ae7600d4ae14ed73.jpg",
       "title": "Harry Potter and the chamber of secrets",
       "releaseDay": "July 2, 1998",
       "img":"https://i.pinimg.com/originals/94/c0/b1/94c0b1fbd18ee9b1c06312ea51944c54.jpg",
@@ -16186,6 +16188,7 @@ export default {
     },
     {
       "id": 3,
+      "img": "https://i.pinimg.com/564x/93/e2/55/93e255c770c8a6e676365828357b236a.jpg",
       "title": "Harry Potter and the Prisoner of Azkaban",
       "releaseDay": "July 8, 1999",
       "img":"https://librotea.com/wp-content/uploads/2019/05/27/17/14/ad4552431ee250fc6994006b6393f7ae-300x0-c-default.jpg",
@@ -16194,6 +16197,7 @@ export default {
     },
     {
       "id": 4,
+      "img": "https://i.pinimg.com/564x/47/61/1e/47611e7a821249249d65a7480d51f145.jpg",
       "title": "Harry Potter and the Goblet of Fire",
       "releaseDay": "July 8, 2000",
       "img":"https://images.payhip.com/o_1f5rlbb8r1cpa1j3c18r411mc17c8r.jpg",
@@ -16202,6 +16206,7 @@ export default {
     },
     {
       "id": 5,
+      "img": "https://i.pinimg.com/564x/6b/2e/3d/6b2e3da279d7cf7a07b1f3ac78293bc7.jpg",
       "title": "Harry Potter and the Order of the Phoenix",
       "releaseDay": "June 21, 2003",
       "img":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqaqFmB_JAUNJGnCTp1jPCzsICgOS5Jfc0kOgDKCjvTx5UduMb82xfQf1SXaWFEhomGCo&usqp=CAU",
@@ -16210,6 +16215,7 @@ export default {
     },
     {
       "id": 6,
+      "img": "https://i.pinimg.com/564x/97/ac/8e/97ac8eea2b3f71c793fa1d6b9bfc7669.jpg",
       "title": "Harry Potter and the Half-Blood Prince",
       "releaseDay": "July 16, 2005",
       "img":"https://loresumo.com/wp-content/uploads/2019/09/harry-potter-y-el-misterio-del-Pr%C3%ADncipe-1.jpg",
@@ -16218,6 +16224,7 @@ export default {
     },
     {
       "id": 7,
+      "img": "https://i.pinimg.com/564x/b6/40/76/b640767915dfe91d6ae85706181b61fa.jpg",
       "title": "Harry Potter and the Deathly Hallows",
       "releaseDay": "July 21, 2007",
       "img":"https://www.lancomperu.com/imagenes/9788498/978849838929.GIF",
@@ -16226,6 +16233,7 @@ export default {
     },
     {
       "id": 8,
+      "img": "https://i.pinimg.com/564x/db/e6/a1/dbe6a10f58bd208870ca5781e6895e38.jpg",
       "title": "Harry Potter and the Cursed Child",
       "releaseDay": "July 30, 2016",
       "img":"https://images.cdn3.buscalibre.com/fit-in/360x360/a2/ea/a2ea4887a569c9be552a8aa10f174d43.jpg",
