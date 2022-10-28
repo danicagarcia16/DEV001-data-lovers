@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { getBooks } from './data.js';
 
@@ -35,6 +36,11 @@ buttonLibros.addEventListener("click", () => {
   document.body.style.backgroundImage = 'none';
 })
 
+=======
+import {getBooks} from './data.js';
+/*import harrypotter from "./data/harrypotter/data.js"*/
+
+>>>>>>> 2c461531ac0cc2104b5599d7b7732a66cda64fa3
 
 const  addElement =() =>{
   let newDiv = document.getElementById("listas");
@@ -49,6 +55,13 @@ const  addElement =() =>{
   newDiv.appendChild(newContent);
 });
 }
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> 2c461531ac0cc2104b5599d7b7732a66cda64fa3
 const buttonPelis= document.getElementById("peliculas");
 
 buttonPelis.addEventListener("click",()=>{

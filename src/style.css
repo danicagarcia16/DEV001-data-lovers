@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 /*Aplicando estilos globales*/
 *{
@@ -223,6 +224,14 @@ body{
     background-size: 100%;
 }
 
+=======
+body{
+    background-image: url("https://allgamersin.com/wp-content/uploads/2020/02/Hogwarts1.jpg");
+    background-repeat:no-repeat;
+    background-size: 100%;
+}
+
+>>>>>>> 2c461531ac0cc2104b5599d7b7732a66cda64fa3
 #rectangle{
     height: 100px;
     left: 0px;
@@ -247,5 +256,9 @@ il{
     position: relative;
     left: -800px;
     font-size: 40px;
+<<<<<<< HEAD
 }
+=======
+
+>>>>>>> 2c461531ac0cc2104b5599d7b7732a66cda64fa3
 }
