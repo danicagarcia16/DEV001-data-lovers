@@ -8,4 +8,13 @@ export {
 
 };
 
+const getSpells = () => {
+    return Object.values(harrypotter.spells);
+}
+
+export {
+    getSpells
+
+};
+
 

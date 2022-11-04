@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+.filtrarSpells{
+    display:none;
+}
+
 body{
     background-image: url(img/HP.png);
     background-size: 100% 100%;
@@ -17,6 +21,7 @@ body{
     align-items: flex-end;
     align-self: flex-end;
 }
+
 
 /*Modificando el header*/
 .header{
@@ -81,6 +86,158 @@ body{
     cursor: pointer;
 }
 
+/*Agregando bienvenida*/
+.hp {
+    font-family: 'Lucida Sans';
+    font-weight: bold;
+    font-size: 50px;
+    color: #242f40;
+    text-align: center;
+}
+
+.modal {
+    /* display: none; */
+    position: fixed;
+    z-index: 1;
+    overflow: auto;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.452);
+}
+
+.flex {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutHP {
+    position: relative;
+    /*background-image: url("img/Patronus5.jpg.png");*/
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: white;
+    margin: auto;
+    width: 30%;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.452);
+    animation-name: modal;
+    animation-duration: 2s;
+}
+
+ 
+
+
+
+
+#miModal2{
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color: #111111bd;
+    display:flex;
+    opacity: 0;
+    pointer-events: none;
+}
+
+#miModal2--show{
+   opacity: 1;
+   pointer-events: unset;
+}
+.aboutHP2{
+margin:auto;
+width: 90%;
+max-width: 600px;
+max-height: 90%;
+background-color: #ffff;
+border-radius: 6px;
+padding:3em 2.5em;
+}
+
+.hp2{
+    font-family: 'Lucida Sans';
+    font-weight: bold;
+    font-size: 50px;
+    color: #242f40;
+    text-align: center;
+}
+.iconHP2 {
+    width: 30%;
+    display: block;
+    margin: auto;}
+
+.iconHP3{
+width: 50%;
+display: block;
+margin:auto ;
+justify-content:flex-end ;
+}
+.close2 {
+        float: right;
+        font-size: 48px;
+        padding: 5px;
+        margin: 5px;
+        background-color: salmon;
+    }
+    
+.close2:hover {
+        color: white;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+   
+
+
+
+
+@keyframes modal {
+    from {
+        top: -330px;
+        opacity: 0;
+    }
+    to {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+.close {
+    float: right;
+    font-size: 48px;
+    padding: 5px;
+    margin: 5px;
+    background-color: salmon;
+}
+
+.close:hover {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.iconHP {
+    width: 30%;
+    display: block;
+    margin: auto;
+}
+
+.centerText {
+    margin: 0px auto;
+    font-family: 'Segoe UI';
+    font-size: 18px;
+    color: #283618;
+    text-align: center;
+    width: 50%;
+    margin-bottom: 30px;
+    margin-top: 0px;
+}
 /*Dando formato a botones*/
 .boton{
     background-color: rgba(192, 192, 192, 0.3);
@@ -114,7 +271,7 @@ body{
     background-image: url("https://i.pinimg.com/564x/64/17/90/6417901a7b11b41fbe8101481d65528b.jpg");
 }
 
-#deporte {
+#spells{
     background-image: url("https://i.pinimg.com/564x/af/b7/4d/afb74d3cabf110f566460e0b92cae9e1.jpg");
 }
 
@@ -125,13 +282,21 @@ body{
     align-items: flex-end;
 }
 
+.card{
+    display: flex;
+    height: 1vh;
+    align-items:center;
+    flex-wrap: wrap;
+    justify-content: space-between ;
+}
 
 .informacion{
-    background-image: url(img/pergamino.png);
+    background-image: url(img/fondo\ \(2\).jpg);
     background-position: center;
     display: flex;
+    justify-content: space-between;
     flex-direction: column;
-    width: 600px;
+    width: 400px;
     height: 800px;
     padding:30px;
     margin: 20px;
@@ -140,6 +305,12 @@ body{
     justify-content: center;
 }
 
+.card{
+    display: flex;
+    height: 90vh;
+    align-items: flex-end;
+    justify-content: space-between ;
+}
 .text-total{
     padding: 10px 40px 5px 40px;
 }
@@ -156,6 +327,83 @@ body{
     background: none;
     border: none;
 }
+
+
+.cardSpells{
+    display: flex;
+    height: 1vh;
+    align-items:center;
+    flex-wrap: wrap;
+    justify-content: space-between ;
+}
+.informacion2{
+    background-image: url(img/pergamino.png);
+    background-position: center;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 400px;
+    height: 800px;
+    padding:30px;
+    margin: 20px;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+}
+.cardSpells{
+    display: flex;
+    height: 90vh;
+    align-items: flex-end;
+    justify-content: space-between ;}
+
+
+/*Agregando description al button*/
+
+
+.modalBook{
+    position: relative;
+    /*background-image: url("img/Patronus5.jpg.png");*/
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: white;
+    margin: auto;
+   /* width: 30%;*/
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.452);
+    animation-name: modal;
+    animation-duration: 2s;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes modalBook {
+    from {
+        top: -330px;
+        opacity: 0;
+    }
+    to {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+.closeBook {
+    float: right;
+    font-size: 48px;
+    padding: 5px;
+    margin: 5px;
+    background-color: salmon;
+}
+
+.closeBook:hover {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
 
 /*Responsive*/
 @media(max-width:800px){
@@ -215,11 +463,6 @@ body{
         flex-direction: column;
 
     }
-    
-body{
-    background-image: url("https://allgamersin.com/wp-content/uploads/2020/02/Hogwarts1.jpg");
-    background-repeat:no-repeat;
-    background-size: 100%;
 }
-}
+
 

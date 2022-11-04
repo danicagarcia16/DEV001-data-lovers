@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" ></option>
   <title>Data Lovers</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css" ></option>
   <script src="https://kit.fontawesome.com/2fa6b325e3.js" crossorigin="anonymous"></script>
 </head>
 
@@ -29,24 +30,74 @@
       </ul>
     </nav>
   </header>
+  <!--Bienvenida-->
+  <div class="modal" id="miModal">
+    <div class="flex" id="flex">
+        <div class="aboutHP">
+            <div><span class="close" id="close">&times;</span> <br>
+                <div>
+                    <h1 class="hp">Acerca de Harry Potter</h1>
+                </div>
+                <div><img class="iconHP" src="img/logo.png" alt=""></div>
+                <div class="centerText">
+                  Harry Potter es una serie de novelas fantásticas escrita por la autora británica J. K. Rowling, en la que se describen las aventuras del joven aprendiz de magia y hechicería Harry Potter y sus amigos Hermione Granger y Ron Weasley, durante los años que pasan en el Colegio Hogwarts de Magia y Hechicería. El argumento se centra en la lucha entre Harry Potter y el malvado mago lord Voldemort, quien asesinó a los padres de Harry en su afán de conquistar el mundo mágico.
+                </div>
+                <div><img class="iconHP" src="img/escudos.png" alt=""><br></div><br>
+                <div class="centerText">
+                  Conoce acerca de este magico mundo,sus personajes, sus curiosidades, pociones, hechizos y mas ...
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+
   <!--Creando botones de acceso-->
   <div class="botones">
     <div id="lista" class="lista">
       <button class="harry boton" type="button" id="peliculas"></button>
       <button class="harry boton" type="button" id="libros"></button>
       <button class="harry boton" type="button" id="personajes"></button>
-      <button class="harry boton" type="button" id="deporte"></button>
+      <button class="harry boton" type="button" id="spells"></button>
     </div>
     <div id="card" class="card">
     </div>
+    <div class="modal2" id="miModal2">
+      <div class="flex2" id="flex2">
+          <div class="aboutHP2">
+              <div><span class="close2" id="close2">&times;</span> <br>
+                  <div>
+                      <h1 class="hp2">DESCRPCIÓN DEL LIBRO</h1>
+                  </div>
+                  <div><img class="iconHP2" src="img/LOGOMODAL.png" alt=""><br></div><br>
+                  <div><img class="iconHP3" src="img/JP.png" alt=""><br></div><br>
+                  </div>
+          </div>
+
+      </div>
+
   </div>
-  <h1>holaqqqq</h1>
+
+    <select id="filtrarSpells" style="visibility:hidden">
+      <option value="Todos" selected>Todos</option>
+      <option value="Charm">Charm</option>
+      <option value="Jinx">Jinx</option>
+      <option value="Transfiguration">Transfiguration</option>
+      <option value="Curse">Curse</option>
+      <option value="Spell">Spell</option>
+      <option value="Hex">Hex</option>
+      <option value="Healing Spell">Healing Spell</option>
+      <option value="Conjuration">Conjuration</option>
+      <option value="Dark Arts">Dark Arts</option>
+      <option value="Dark Charm">Dark Charm</option>
+      <option value="Vanishment">Vanishment</option>
+    </select>
+    <div id="cardSpells" class="cardSpells">
+    </div>
+  </div>  
+  
+
   <!--Creando filtro para ordenar-->
-  <div class="ordenar">
-    <label><input type="radio" name="date" value="Antiguo"> Mas Antiguo</label>
-    <label><input type="radio" name="date" value="Reciente"> Mas Reciente</label>
-  </div>
-  </div>
   <script type="module" src="./main.js"></script>
   <script type="module" src="./index.js"></script>
 </body>
+
