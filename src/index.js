@@ -20,15 +20,5 @@ cerrar.addEventListener('click', () => {
     modal.style.display = "none";
 });
 
-/*let modalBook = document.getElementById('miModalBook');
-let cerrarBook = document.getElementById('closeBook');
-
-cerrarBook.addEventListener('click', () => {
-    modalBook.style.display = "none";
-});*/
-const buttonLibros = document.getElementById("libros");
-buttonLibros.addEventListener("click", () => {
-  filtrarLibros();
-  document.getElementById("lista").style.display = 'none';
-})  
+ 
 

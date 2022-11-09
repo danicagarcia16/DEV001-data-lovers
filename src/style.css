@@ -129,27 +129,6 @@ body{
     animation-duration: 2s;
 }
 
- 
-
-
-
-
-#miModal2{
-    position: fixed;
-    top:0;
-    left:0;
-    right:0;
-    bottom:0;
-    background-color: #111111bd;
-    display:flex;
-    opacity: 0;
-    pointer-events: none;
-}
-
-#miModal2--show{
-   opacity: 1;
-   pointer-events: unset;
-}
 .aboutHP2{
 margin:auto;
 width: 90%;
@@ -193,10 +172,6 @@ justify-content:flex-end ;
     }
 
    
-
-
-
-
 @keyframes modal {
     from {
         top: -330px;
@@ -228,7 +203,8 @@ justify-content:flex-end ;
     margin: auto;
 }
 
-.centerText {
+.centerText-1,
+.centerText-2 {
     margin: 0px auto;
     font-family: 'Segoe UI';
     font-size: 18px;
@@ -268,27 +244,54 @@ justify-content:flex-end ;
 }
 
 #personajes {
-    background-image: url("https://i.pinimg.com/564x/64/17/90/6417901a7b11b41fbe8101481d65528b.jpg");
+    background-image: url("https://pm1.narvii.com/6205/4cf70ff6299e4247a2f4e9652671d2007c02a3c1_hq.jpg");
 }
 
 #spells{
-    background-image: url("https://i.pinimg.com/564x/af/b7/4d/afb74d3cabf110f566460e0b92cae9e1.jpg");
+    background-image: url("https://guiauniversitaria.mx/wp-content/uploads/2020/08/%C2%BFPor-qu%C3%A9-los-hechizos-de-Harry-Potter-se-pronuncian-en-lat%C3%ADn_.jpg");
 }
-
+.botones{
+    width:100vw;
+}
 
 .lista{
     display: flex;
-    height: 85vh;
+    height: 80px;
     align-items: flex-end;
+    justify-content: space-between;
+    padding:80px;
+    margin: 30px;
+    
+}
+
+.bloque{
+align-items: center;
+color:#fff;
+text-align: center;
 }
 
 .card{
     display: flex;
-    height: 1vh;
     align-items:center;
     flex-wrap: wrap;
     justify-content: space-between ;
+
+   
 }
+.card div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+.card{
+    display: flex;
+    height: 90vh;
+    align-items: flex-end;
+    justify-content: space-between ;
+}
+
+
 
 .informacion{
     background-image: url(img/fondo\ \(2\).jpg);
@@ -303,14 +306,9 @@ justify-content:flex-end ;
     border-radius: 10px;
     align-items: center;
     justify-content: center;
+    
 }
 
-.card{
-    display: flex;
-    height: 90vh;
-    align-items: flex-end;
-    justify-content: space-between ;
-}
 .text-total{
     padding: 10px 40px 5px 40px;
 }
@@ -331,10 +329,18 @@ justify-content:flex-end ;
 
 .cardSpells{
     display: flex;
-    height: 1vh;
+    /* height: 1vh; */
     align-items:center;
     flex-wrap: wrap;
     justify-content: space-between ;
+   
+}
+
+.cardSpells div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
 }
 .informacion2{
     background-image: url(img/pergamino.png);
@@ -349,12 +355,107 @@ justify-content:flex-end ;
     border-radius: 10px;
     align-items: center;
     justify-content: center;
+   
 }
 .cardSpells{
     display: flex;
     height: 90vh;
     align-items: flex-end;
     justify-content: space-between ;}
+
+    
+.cardPotions{
+    display: flex;
+    /* height: 1vh; */
+    align-items:center;
+    flex-wrap: wrap;
+    justify-content: space-between ;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+}
+
+.cardPotions div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+.informacion3{
+    background-image: url(img/imagen3.png);
+    background-position: center center;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 350px;
+    height: 500px;
+    padding:30px;
+    margin: 20px;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+   
+}
+.cardPotions{
+    display: flex;
+    height: 90vh;
+    align-items: flex-end;
+    justify-content: space-between ;}
+
+.titulo3{
+  display: flex;
+  width:200px;
+  top: -90px;
+}
+.titulo3.id{
+display:flex ;
+justify-content: center;
+
+}
+.cardPersonajes{
+    width: 100%;
+    max-width: 1200px;
+    height: 430px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+    
+    
+}
+
+
+.informacion4{
+    background-image:url(img/jj.jpg);
+    width: 330px;
+    height: 430px;
+    border-radius: 8px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin: 20px;
+    text-align: center;
+    
+    
+}
+
+
+.informacion4:hover{
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+.informacion4 h1{
+    font-weight: 600;
+}
+.informacion4 h5{
+    padding: 0 1rem;
+    font-size: 16px;
+    font-weight: 300;
+}
+.iconHP2{
+
+max-width: 1000px;
+width:4000px;
+height: 400px;
+}
+
 
 
 /*Agregando description al button*/
@@ -415,6 +516,7 @@ justify-content:flex-end ;
         background-position-y: bottom;
         padding: 190px 70px 0px 70px;
     }
+
     
     .header{
         height: 60px;
@@ -460,9 +562,40 @@ justify-content:flex-end ;
     }
 
     .lista{
+       
         flex-direction: column;
-
-    }
+        
+        }
 }
+
+/*modal books*/
+.is-visible{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/** Modal */
+.modal-book {
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+  }
+  .modal-close-btn {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 20px;
+  }
+
 
 

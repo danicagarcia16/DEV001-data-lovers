@@ -1,8 +1,9 @@
-import { getBooks,getSpells} from './data.js';
+import { getBooks,getSpells,getPotions,getCharacters,filtrargenero, filtrarcasas,ordenAZ,ordenZA} from './data.js';
+import data from './data/harrypotter/data.js';
 
 /*Filtrando libros*/
 let newDiv = document.getElementById("card");
-let tempBook = []
+//let tempBook = []
 const filtrarLibros = () => {
   getBooks().forEach(book => {
     let newContent = document.createElement("div");
@@ -15,25 +16,39 @@ const filtrarLibros = () => {
                               </div>
                               <button id="verMas${book.id}" class="button">Ver mas</button>
                             </div>`
-                            newDiv.appendChild(newContent);})}
+                            newDiv.appendChild(newContent);
+                          
+
+                            const openmimodal= document.querySelector(`#verMas${book.id}`);
+                            //console.log(openmimodal,'open dmodal de danica 2');
                            
+                            //  const modal2= document.querySelector('.miModal2')
+                            // const closemodal= document.querySelector('.close2')
+                            
+                            openmimodal.addEventListener('click', (e)=>{
+                              e.preventDefault();
+                              //console.log('pruebas daniscas');
+                              document.getElementById("miModal").style.display = "block";
+                              let modalTitleBook = document.querySelector(".hp");
+                              modalTitleBook.innerText = `${book.title}`;
+                              let newDivInformacionMain = document.querySelector(".centerText-1");
+                              newDivInformacionMain.innerText = `${book.description}`;
+                              let deleteInformacionMain = document.querySelector(".centerText-2");
+                              deleteInformacionMain.innerText = ` `;
+                        
+                            })
+                          
+                          })}
+                           //Boton para acceder a los libros 
                             const buttonLibros = document.getElementById("libros");
                             buttonLibros.addEventListener("click", () => {
                               filtrarLibros();
                               document.getElementById("lista").style.display = 'none';
+                              const backimagen= document.querySelector("body")
+                              backimagen.style.backgroundImage="none";
                             })
-                            const openmimodal= document.querySelector(`.verMas${book.id}`)
-                            const modal2= document.querySelector('.miModal2')
-                            const closemodal= document.querySelector('.close2')
-                            
-                            openmimodal.addEventListener('click', (e)=>{
-                              e.preventDefault();
-                              modal2.classList.add('miModal2--show');})
-                            
-                            closemodal.addEventListener('click', (e)=>{
-                                e.preventDefault();
-                                modal2.classList.remove('miModal2--show');
-                            })
+                      
+                           
     /*let seeMore = document.createElement ("div")
     let verMas = document.getElementById (`verMas${book.id}`)
     verMas.addEventListener("click",()=>{
@@ -77,14 +92,17 @@ const  addSpells =(data) =>{
 }
 
 
+
 /* BOTON PARA ACCEDER A LA PAGINA */
 const buttonSpells = document.getElementById("spells");
 const selectSpells = document.getElementById ("filtrarSpells")
-
+const spellsContainer = document.getElementById("spellsContainer")
 buttonSpells.addEventListener("click",()=>{
     addSpells(getSpells());
-    selectSpells.style.visibility="visible";
+    spellsContainer.style.visibility="visible";
     document.getElementById("lista").style.display = 'none';
+    const backimagen= document.querySelector("body")
+  backimagen.style.backgroundImage="none";
   })
 
 /* BOTON PARA  FILTRAR TIPO */
@@ -100,3 +118,225 @@ selectSpells.addEventListener("click", ()=>{
   addSpells(typeFiltered)  
 })
 
+//TARJETAS DE PERSONAJES
+const  addPersonajes =(data) =>{
+  let newDiv5 = document.getElementById("cardPersonajes");
+ let newContent5 = document.createElement("div");
+ newContent5.classList.add("my-class2");
+  data.forEach(characters => {
+  newContent5.innerHTML+=`<div class="informacion4">
+                        <div><img class="iconHP" src="img/logo.png" alt=""></div>
+                        <h1>${characters.name}</h1>
+                        <h5>${characters.birth}</h5>
+                        <h5>${characters.death}</h5>
+                        <h5>${characters.house}</h5>
+                        <span>Tipo: ${characters.species}</span><br>
+                        <span>Tipo: ${characters.gender}</span><br><br><br>
+                        <div><img class="iconHP" src="img/JP.png" alt="" ></div>`
+                        
+                        
+  });
+  newDiv5.appendChild(newContent5);
+
+}
+//FUNCION DE FILTRAR CASAS Y GENERO
+ const selectCasas= document.getElementById("filterCasas")
+   selectCasas.addEventListener("change", (e)=>{
+     let arreglofiltrado2 = filtrarcasas(data.characters, e.target.value)
+     //let containerarjetas2 = document.querySelector('.my-class2');
+     let housefiltros= document.querySelector(".cardPersonajes");
+     let personajesfiltros = document.querySelector(".cardPersonajesGenero");
+     housefiltros.innerHTML="";
+     personajesfiltros.innerHTML = "";
+    arreglofiltrado2.forEach(characters => {
+       housefiltros.innerHTML+=`<div class="informacion4">
+       <div><img class="iconHP" src="img/logo.png" alt=""></div>
+       <h1>${characters.name}</h1>
+       <h5>${characters.birth}</h5>
+       <h5>${characters.death}</h5>
+       <h5>${characters.house}</h5>
+       <span>Tipo: ${characters.species}</span><br>
+       <span>Tipo: ${characters.gender}</span><br><br><br>
+       <div><img class="iconHP" src="img/JP.png" alt="" ></div>`
+      })});
+      const selectGenero= document.getElementById("filterGender")
+   selectGenero.addEventListener("change", (e)=>{
+     let arreglofiltrado2 = filtrargenero(data.characters, e.target.value)
+     //let containerarjetas2 = document.querySelector('.my-class2');
+     let housefiltros= document.querySelector(".cardPersonajes");
+     let personajesfiltros = document.querySelector(".cardPersonajesGenero");
+     housefiltros.innerHTML="";
+     personajesfiltros.innerHTML = "";
+    arreglofiltrado2.forEach(characters => {
+       housefiltros.innerHTML+=`<div class="informacion4">
+       <div><img class="iconHP" src="img/logo.png" alt=""></div>
+       <h1>${characters.name}</h1>
+       <h5>${characters.birth}</h5>
+       <h5>${characters.death}</h5>
+       <h5>${characters.house}</h5>
+       <span>Tipo: ${characters.species}</span><br>
+       <span>Tipo: ${characters.gender}</span><br><br><br>
+       <div><img class="iconHP" src="img/JP.png" alt="" ></div>`
+      })});
+
+
+
+  
+
+
+//Boton de personajes
+const buttonPersonajes = document.getElementById("peliculas");
+
+const filtrarCasas2 = document.getElementById("filterCasas")
+const filtrargenero2 = document.getElementById("filterGender")
+const charactersContainer = document.getElementById("charactersContainer")
+buttonPersonajes.addEventListener("click",()=>{
+    addPersonajes(getCharacters());
+   
+    charactersContainer.style.visibility="visible";
+    filtrarCasas2.style.visibility="visible";
+    filtrargenero2.style.visibility="visible";
+document.getElementById("lista").style.display = 'none';
+  const backimagen= document.querySelector("body")
+  backimagen.style.backgroundImage="none";
+
+  
+  })
+
+
+//Ordenando de  A a Z
+//Crear cartillas para las posiciones
+
+const  addPotions =(data) =>{
+  
+  let newDiv2 = document.getElementById("cardPotions");
+  //console.log(newDiv2,newDiv2.firstChild)
+  newDiv2.firstChild&&newDiv2.removeChild(newDiv2.firstChild);
+  let newContent2 = document.createElement("div");
+  newContent2.classList.add("my-class");
+  data.forEach(potions => {
+  newContent2.innerHTML+=`<div class="informacion3">
+                        <div class="titulo3">
+                        <h1 >${potions.id}</h1>
+                        <h1 >${potions.name}</h1>
+                        <span>Descripción: ${potions.description}</span></div></div>` ;
+
+                        
+  });
+  newDiv2.appendChild(newContent2);   
+  
+  
+//Ordenando de AZ
+const selectPotions= document.getElementById("filterAZ")
+selectPotions.addEventListener("change", (e)=>{
+const ponts = getPotions();
+  if(e.target.value == 'aZ'){
+    let arrayAZ =  ordenAZ(ponts);
+    let containerarjetas = document.querySelector('.my-class');
+    let containerarjetasAZ = document.querySelector('.cardPotionsAZ');
+    let containerarjetasZA = document.querySelector('.cardPotionsZA');
+    containerarjetas.innerHTML = ' ';
+    containerarjetasZA.innerHTML = ' ';
+    //console.log('arreglo 11');
+    arrayAZ.forEach(potions => {
+      containerarjetasAZ.innerHTML+=`<div class="informacion3">
+                            <div class="titulo3">
+                            <h1 >${potions.id}</h1>
+                            <h1 >${potions.name}</h1>
+                            <span>Descripción: ${potions.description}</span></div></div>` ;
+    
+                            
+      });
+  }else{
+    let arrayZA =  ordenZA(ponts);
+    let containerarjetas = document.querySelector('.my-class');
+    let containerarjetasZA = document.querySelector('.cardPotionsZA');
+    let containerarjetasAZ = document.querySelector('.cardPotionsAZ');
+    containerarjetas.innerHTML = ' ';
+    containerarjetasAZ.innerHTML = ' ';
+    //console.log('arreglo 21');
+    arrayZA.forEach(potions => {
+      containerarjetasZA.innerHTML+=`<div class="informacion3">
+                            <div class="titulo3">
+                            <h1 >${potions.id}</h1>
+                            <h1 >${potions.name}</h1>
+                            <span>Descripción: ${potions.description}</span></div></div>` ;
+    
+                            
+      });
+  }
+
+
+
+// let cartPotions = document.getElementById("cardPotions");
+//   const pots = getPotions();
+//   potionsarray(pots);
+  // pots.forEach(potions => {
+   
+  //   }); 
+})
+//Ordenando de ZA
+// const selectPotions2= document.getElementById("filterZA")
+// selectPotions.addEventListener("click", ()=>{
+
+//   function SortArray(a, b){
+//     if (a.name < b.name) {return -1;}
+//    if (a.name > b.name) {return 1;}
+//     return 0;
+// }
+
+// var l = getPotions().sort(SortArray);
+// console.log(s);
+// })
+
+//Ordenando ZA
+// const selectPotionsZA= document.getElementById("filterZA")
+// selectPotionsZA.addEventListener("click", ()=>{
+//   // const pots = getPotions();
+//   // potionsarraynew(pots);
+
+//   function SortArray(x, y){
+//      if (x.name < y.name) {return -1;}
+//     if (x.name > y.name) {return 1;}
+//     return 0;
+// }
+// var s = getPotions().sort(SortArray);
+// console.log(s);
+ 
+// })
+}
+const buttonpersonajes = document.getElementById("personajes")
+const ordenarSpells = document.getElementById("filterAZ")
+buttonpersonajes.addEventListener("click",()=>{
+addPotions(getPotions());
+ordenarSpells.style.visibility="visible";
+document.getElementById("lista").style.display = 'none';
+const backimagen= document.querySelector("body")
+  backimagen.style.backgroundImage="none";
+})
+
+
+/*const selectPotions= document.getElementById("filterAZ")
+ selectPotions.addEventListener("click",()=>{
+  console.log("hola como estas?")
+  if (e.target.value === "zA") {
+let arreglodescendente = potionsarraynew (data.potions);
+console.log(arreglodescendente)
+let nombresdescendentes = document.querySelector(".cardPotions")
+        nombresdescendentes.innerHTML = ""
+        arreglodescendente.forEach(potions => {
+          $('.cardPotions').innerHTML("beforeend", (potions));
+  })}
+
+else {
+  let arregloascendente =potionsarray (data.potions);
+  console.log(arregloascendente)
+  let nombresascendentes = document.querySelector(".cardPotions")
+        nombresascendentes.innerHTML = ""
+        arreglodescendente.forEach(potions => {
+          $('.cardPotions').innerHTML("beforeend", (potions));
+      })}*/
+  
+
+  
+ 
