@@ -1,7 +1,7 @@
 import { getBooks,getSpells,getPotions,getCharacters,filtrargenero, filtrarcasas,ordenAZ,ordenZA} from './data.js';
 import data from './data/harrypotter/data.js';
 
-/*Filtrando libros*/
+/Filtrando libros/
 let newDiv = document.getElementById("card");
 //let tempBook = []
 const filtrarLibros = () => {
@@ -125,14 +125,12 @@ const  addPersonajes =(data) =>{
  newContent5.classList.add("my-class2");
   data.forEach(characters => {
   newContent5.innerHTML+=`<div class="informacion4">
-                        <div><img class="iconHP" src="img/logo.png" alt=""></div>
                         <h1>${characters.name}</h1>
                         <h5>${characters.birth}</h5>
                         <h5>${characters.death}</h5>
                         <h5>${characters.house}</h5>
                         <span>Tipo: ${characters.species}</span><br>
-                        <span>Tipo: ${characters.gender}</span><br><br><br>
-                        <div><img class="iconHP" src="img/JP.png" alt="" ></div>`
+                        <span>Tipo: ${characters.gender}</span><br><br><br>`
                         
                         
   });
@@ -150,14 +148,13 @@ const  addPersonajes =(data) =>{
      personajesfiltros.innerHTML = "";
     arreglofiltrado2.forEach(characters => {
        housefiltros.innerHTML+=`<div class="informacion4">
-       <div><img class="iconHP" src="img/logo.png" alt=""></div>
+     
        <h1>${characters.name}</h1>
        <h5>${characters.birth}</h5>
        <h5>${characters.death}</h5>
        <h5>${characters.house}</h5>
        <span>Tipo: ${characters.species}</span><br>
-       <span>Tipo: ${characters.gender}</span><br><br><br>
-       <div><img class="iconHP" src="img/JP.png" alt="" ></div>`
+       <span>Tipo: ${characters.gender}</span><br><br><br>`
       })});
       const selectGenero= document.getElementById("filterGender")
    selectGenero.addEventListener("change", (e)=>{
@@ -169,14 +166,12 @@ const  addPersonajes =(data) =>{
      personajesfiltros.innerHTML = "";
     arreglofiltrado2.forEach(characters => {
        housefiltros.innerHTML+=`<div class="informacion4">
-       <div><img class="iconHP" src="img/logo.png" alt=""></div>
        <h1>${characters.name}</h1>
        <h5>${characters.birth}</h5>
        <h5>${characters.death}</h5>
        <h5>${characters.house}</h5>
        <span>Tipo: ${characters.species}</span><br>
-       <span>Tipo: ${characters.gender}</span><br><br><br>
-       <div><img class="iconHP" src="img/JP.png" alt="" ></div>`
+       <span>Tipo: ${characters.gender}</span><br><br><br>`
       })});
 
 

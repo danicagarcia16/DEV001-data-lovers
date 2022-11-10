@@ -9,11 +9,17 @@ En este proyecto usamos 5 historias de usuario: 1- HU Yo como fan de Harry Potte
 3. Pototipo de baja fidelidad.
 
 Nuestro primer prototipo lo diseñamos usando una hoja de papel y lapiz como guia.
-<img src="baja fidelidad.jpeg">
 
-4.Protoripo de alta fidelidad.
+<img src="/baja fidelidad.jpeg">
+
+4.Prototipo de alta fidelidad.
 Se realizo dos propuestas 
+
 Primera se hizo en adobeIllustreitor
-<img src="uno.jpg">
+
+<img src="/uno.jpg">
+
 Segunda propuesta se realizo en Figma y nos quedamos con ella par el proyecto
-<img src="dos.jpeg">
+
+
+<img src="/dos.jpeg">

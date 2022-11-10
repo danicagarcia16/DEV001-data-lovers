@@ -77,29 +77,12 @@
   <div id="card" class="card">
   </div>
 
-  <!-- <div class="modal2" id="miModal2">
-      <div class="flex2" id="flex2">
-        <div class="aboutHP2">
-          <div><span class="close2" id="close2">&times;</span> <br>
-            <div>
-              <h1 class="hp2">DESCRPCIÓN DEL LIBRO</h1>
-            </div>
-            <div><img class="iconHP2" src="img/LOGOMODAL.png" alt=""><br></div><br>
-            <div><img class="iconHP3" src="img/JP.png" alt=""><br></div><br>
-          </div>
-        </div>
-
-      </div>
-
-    </div> -->
-
-
   <select id="filterAZ" style="visibility:hidden">
     <option disabled selected>Elige el orden</option>
     <option id="filterAZS" value="aZ" selected>A - Z</option>
     <option id="filterZA" value="zA">Z - A</option>
   </select>
-  <div>
+  <div class="divGeneralContainer">
     <div id="spellsContainer" style="visibility:hidden">
       <h1>Filter</h1>
       <select id="filtrarSpells">
@@ -128,12 +111,12 @@
   <div>
     <div id="charactersContainer" style="visibility:hidden">
       <h1>Filter</h1>
-      <select id="filterGender" >
+      <select id="filterGender">
         <option disabled selected>Filtrar Generos</option>
         <option value="Female">Female</option>
         <option value="Male">Male</option>
       </select>
-      <select id="filterCasas" >
+      <select id="filterCasas">
         <option disabled selected>Filtrar Casas</option>
         <option value="Gryffindor">Gryffindor</option>
         <option value="Ravenclaw">Ravenclaw</option>
@@ -147,10 +130,7 @@
     <div id="cardPersonajesHouse" class="cardPersonajesHouse"></div>
   </div>
 
-
-
-
-  <!--Creando filtro para ordenar-->
+  
   <script type="module" src="./main.js"></script>
   <script type="module" src="./index.js"></script>
 </body>
