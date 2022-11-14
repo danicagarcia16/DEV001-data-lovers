@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Data Lovers</title>
+  <title>Harry Potter</title>
   <link rel="stylesheet" href="style.css">
 
   <script src="https://kit.fontawesome.com/2fa6b325e3.js" crossorigin="anonymous"></script>
@@ -77,14 +77,9 @@
   <div id="card" class="card">
   </div>
 
-  <select id="filterAZ" style="visibility:hidden">
-    <option disabled selected>Elige el orden</option>
-    <option id="filterAZS" value="aZ" selected>A - Z</option>
-    <option id="filterZA" value="zA">Z - A</option>
-  </select>
   <div class="divGeneralContainer">
-    <div id="spellsContainer" style="visibility:hidden">
-      <h1>Filter</h1>
+    <div id="spellsContainer" style="display:none">
+      <h1>Filter by type</h1>
       <select id="filtrarSpells">
         <option value="Todos" selected>Todos</option>
         <option value="Charm">Charm</option>
@@ -102,14 +97,17 @@
     </div>
     <div id="cardSpells" class="cardSpells">
     </div>
+    <select id="filterAZ" style="display: none;">
+      <option disabled selected>Elige el orden</option>
+      <option id="filterAZS" value="aZ" selected>A - Z</option>
+      <option id="filterZA" value="zA">Z - A</option>
+    </select>
   </div>
-
   <div id="cardPotions" class="cardPotions"></div>
   <div id="cardPotionsAZ" class="cardPotionsAZ"></div>
   <div id="cardPotionsZA" class="cardPotionsZA"></div>
-
   <div>
-    <div id="charactersContainer" style="visibility:hidden">
+    <div id="charactersContainer" style="display: none">
       <h1>Filter</h1>
       <select id="filterGender">
         <option disabled selected>Filtrar Generos</option>
@@ -130,7 +128,7 @@
     <div id="cardPersonajesHouse" class="cardPersonajesHouse"></div>
   </div>
 
-  
+
   <script type="module" src="./main.js"></script>
   <script type="module" src="./index.js"></script>
 </body>
