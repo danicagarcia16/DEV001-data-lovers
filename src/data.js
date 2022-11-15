@@ -1,6 +1,6 @@
-import harrypotter from "./data/harrypotter/data.js"
+import data from "./data/harrypotter/data.js"
 const getBooks = () => {
-    return Object.values(harrypotter.books);
+    return Object.values(data.books);
 }
 
 export {
@@ -9,7 +9,7 @@ export {
 };
 
 const getSpells = () => {
-    return Object.values(harrypotter.spells);
+    return Object.values(data.spells);
 }
 
 export {
@@ -18,7 +18,7 @@ export {
 };
 
 const getPotions = () => {
-    return Object.values(harrypotter.potions);
+    return Object.values(data.potions);
 }
 
 export {
@@ -27,7 +27,7 @@ export {
 };
 
 const getCharacters = () => {
-    return Object.values(harrypotter.characters);
+    return Object.values(data.characters);
 }
 
 export {
