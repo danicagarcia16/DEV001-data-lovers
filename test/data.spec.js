@@ -1,4 +1,4 @@
-import { filtrargenero, filtrarcasas,ordenAZ,ordenZA, getCharacters,getSpells, getPotions } from '../src/data.js';
+import { filtrargenero, filtrarcasas, ordenAZ, ordenZA, getCharacters, getSpells, getPotions } from '../src/data.js';
 import data from '../src/data/harrypotter/data.js';
 
 
@@ -8,7 +8,7 @@ describe('Estos personajes pertenecen a un genero', () => {
   });
 
   it('devuelve un objeto de genero', () => {
-    const arrayMale= [
+    const arrayMale = [
       {
         "id": 1,
         "name": "Euan Abercrombie",
@@ -17,7 +17,7 @@ describe('Estos personajes pertenecen a un genero', () => {
         "species": "Human",
         "ancestry": null,
         "gender": "Male",
- 
+
       },
       {
         "id": 2,
@@ -27,7 +27,7 @@ describe('Estos personajes pertenecen a un genero', () => {
         "species": "Human",
         "ancestry": null,
         "gender": "Male",
-      
+
       },
       {
         "id": 3,
@@ -37,7 +37,7 @@ describe('Estos personajes pertenecen a un genero', () => {
         "species": "Human",
         "ancestry": "Muggle-born or half-blood (possibly)",
         "gender": "Male",
-        
+
       },
     ]
     expect(filtrargenero(arrayMale, "Male")).toEqual(
@@ -59,7 +59,7 @@ describe('Estos personajes pertenecen a una casa', () => {
     expect(typeof filtrarcasas).toBe('function');
   });
 
-  
+
   it('devuelve un objeto de una casa determinada', () => {
 
     const arrayHufflepuf = [{
@@ -94,70 +94,64 @@ describe('Ordenar de la A-Z', () => {
     expect(typeof ordenAZ).toBe('function');
   });
 
-  
+
   it('deberia de retornar un array ordenado de la A a la Z ', () => {
-     const nombreAZ =
-     [ {"name": "Ageing Potion"},{"name":"Fire Protection Potion"},{"name":"Erumpent Potion"}]
-     const resultado =
-     [{ "name": "Ageing Potion"}, { "name":"Erumpent Potion"}, { "name":"Fire Protection Potion"}]
-  
-      expect(ordenAZ(nombreAZ)).toEqual(resultado)
-    
+    const nombreAZ =
+      [{ "name": "Ageing Potion" }, { "name": "Fire Protection Potion" }, { "name": "Erumpent Potion" }]
+    const resultado =
+      [{ "name": "Ageing Potion" }, { "name": "Erumpent Potion" }, { "name": "Fire Protection Potion" }]
+
+    expect(ordenAZ(nombreAZ)).toEqual(resultado)
+
   })
-    });
+});
 
-    describe ("Ordenar de Z-A",  () => {
-      it('is a function', () => {
-        expect(typeof ordenZA).toBe('function');
-      });
-    
-       
-      it('deberia de retornar un array ordenado de la Z a la A ', () => {
-         const nombreZA =
-         [{"name": "Ageing Potion"},{"name":"Fire Protection Potion"},{"name":"Erumpent Potion"}]
-         const resultado =
-         [{"name":"Fire Protection Potion"},{"name":"Erumpent Potion"},{"name": "Ageing Potion"}]
-      //lo que se espera
-          expect(ordenZA(nombreZA)).toEqual(resultado)
-        
-      })
-        });
-
-        describe('getpersonajes', () => {
-          it('Debería ser una funcion', () => {
-            expect(typeof getCharacters).toBe('function');
-          });
-        
-          it('return `array`', () => {
-            expect(getCharacters(data)).toHaveLength(707);
-          });
-        });
-
-        
-            
-           
+describe("Ordenar de Z-A", () => {
+  it('is a function', () => {
+    expect(typeof ordenZA).toBe('function');
+  });
 
 
-             describe('gethechizos', () => {
-          it('Debería ser una funcion', () => {
-            expect(typeof getSpells).toBe('function');
-          });
-        
-          it('return `array`', () => {
-            expect(getSpells(data)).toHaveLength(305);
-          });
-        });
+  it('deberia de retornar un array ordenado de la Z a la A ', () => {
+    const nombreZA =
+      [{ "name": "Ageing Potion" }, { "name": "Fire Protection Potion" }, { "name": "Erumpent Potion" }]
+    const resultado =
+      [{ "name": "Fire Protection Potion" }, { "name": "Erumpent Potion" }, { "name": "Ageing Potion" }]
+    //lo que se espera
+    expect(ordenZA(nombreZA)).toEqual(resultado)
+
+  })
+});
+
+describe('getpersonajes', () => {
+  it('Debería ser una funcion', () => {
+    expect(typeof getCharacters).toBe('function');
+  });
+
+  it('return `array`', () => {
+    expect(getCharacters(data)).toHaveLength(707);
+  });
+});
+
+describe('gethechizos', () => {
+  it('Debería ser una funcion', () => {
+    expect(typeof getSpells).toBe('function');
+  });
+
+  it('return `array`', () => {
+    expect(getSpells(data)).toHaveLength(305);
+  });
+});
 //Mostrar todo la data
-        describe('getPosiciones', () => {
-          it('Debería ser una funcion', () => {
-            expect(typeof getPotions).toBe('function');
-          });
-        
-          it('return `array`', () => {
-            expect(getPotions(data)).toHaveLength(150);
-          });
-        });
-        
-        
+describe('getPosiciones', () => {
+  it('Debería ser una funcion', () => {
+    expect(typeof getPotions).toBe('function');
+  });
 
-      
+  it('return `array`', () => {
+    expect(getPotions(data)).toHaveLength(150);
+  });
+});
+
+
+

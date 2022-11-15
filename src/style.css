@@ -6,15 +6,17 @@
 
 .filtrarSpells {
     display: none;
+    
 }
 
-body {
+main {
     background-image: url(img/HP.png);
     background-size: 100% 100%;
     background-attachment: fixed;
     font-family: sans-serif;
     padding: 120px 10px 15px;
     height: 100%;
+    width: 100%;
     display: flex;
     justify-content: center;
     justify-items: end;
@@ -31,6 +33,7 @@ body {
     width: 100%;
     top: 0%;
     left: 0%;
+    
 }
 
 .nav {
@@ -282,9 +285,6 @@ body {
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-between;
-    height: 90vh;
-
-
 }
 
 .card div {
@@ -337,7 +337,6 @@ body {
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-between;
-
 }
 
 .cardSpells div {
@@ -364,8 +363,6 @@ body {
 
 }
 
-
-
 .cardPotions,
 .cardPotionsAZ,
 .cardPotionsZA {
@@ -374,8 +371,7 @@ body {
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-between;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-}
+   }
 
 .cardPotions div,
 .cardPotionsAZ div,
@@ -422,12 +418,11 @@ body {
 }
 
 .cardPersonajes {
-    width: 100%;
-    height: 430px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     margin: auto;
+    
 }
 
 .cardPersonajes div {
@@ -554,10 +549,10 @@ body {
 
 /*Responsive*/
 @media(max-width:800px) {
-    body {
+    main {
         background-image: url(img/HP\ responsive.png);
         background-repeat: no-repeat;
-        background-size: 100% 100%;
+        background-size: 100% 100% ;
         background-attachment: fixed;
         background-position-y: bottom;
         padding: 150px 70px 0px 70px;
@@ -571,10 +566,13 @@ body {
     }
 
     .card {
-        flex-wrap: wrap;
+       flex-wrap: wrap;
+       justify-content: center;
+        
     }
     .cardPersonajes{
         flex-wrap: wrap;
+        
     }
     .cardPotions,
     .cardPotionsAZ,
@@ -584,6 +582,8 @@ body {
     }
     .cardSpells{
         flex-wrap: wrap;
+       
+       
     }
 
     .header {

@@ -5,7 +5,7 @@ import data from './data/harrypotter/data.js';
 const newDiv = document.getElementById("card");
 const filtrarLibros = () => {
   getBooks().forEach(book => {
-    const newContent = document.createElement("div");
+    const newContent = document.createElement("article");
     newContent.innerHTML += `<div class="informacion">
                               <img src=${book.img} alt=${book.img} width="300px" height="450px">
                               <div class="text-total">
@@ -39,7 +39,7 @@ const buttonLibros = document.getElementById("libros");
 buttonLibros.addEventListener("click", () => {
   filtrarLibros();
   document.getElementById("lista").style.display = 'none';
-  const backimagen = document.querySelector("body")
+  const backimagen = document.querySelector("main")
   backimagen.style.backgroundImage = "none";
 })
 
@@ -70,7 +70,7 @@ buttonSpells.addEventListener("click", () => {
   addSpells(getSpells());
   spellsContainer.style.display = "block";
   document.getElementById("lista").style.display = 'none';
-  const backimagen = document.querySelector("body")
+  const backimagen = document.querySelector("main")
   backimagen.style.backgroundImage = "none";
 })
 
@@ -162,7 +162,7 @@ buttonPersonajes.addEventListener("click", () => {
   filtrarCasas2.style.display = "block";
   filtrargenero2.style.display = "block";
   document.getElementById("lista").style.display = 'none';
-  const backimagen = document.querySelector("body")
+  const backimagen = document.querySelector("main")
   backimagen.style.backgroundImage = "none";
 
 
@@ -274,7 +274,7 @@ buttonpersonajes.addEventListener("click", () => {
   addPotions(getPotions());
   ordenarSpells.style.display = "block";
   document.getElementById("lista").style.display = 'none';
-  const backimagen = document.querySelector("body")
+  const backimagen = document.querySelector("main")
   backimagen.style.backgroundImage = "none";
 })
 
